@@ -29,7 +29,7 @@ requirements:
 test:
   imports:
     - xstatic.pkg.font_awesome
-  require:
+  requires:
     - python {{ python_min }}
 
 about:
