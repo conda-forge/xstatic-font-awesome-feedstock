@@ -16,19 +16,21 @@ build:
 
 requirements:
   build:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
     - xstatic.pkg.font_awesome
+  require:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/FortAwesome/Font-Awesome
